@@ -1,5 +1,5 @@
 import NextAuth, { type DefaultSession } from "next-auth";
-import { PrismaAdapter } from "@auth/prisma-adapter";
+// import { PrismaAdapter } from "@auth/prisma-adapter";
 import Credentials from "next-auth/providers/credentials";
 import Google from "next-auth/providers/google";
 import GitHub from "next-auth/providers/github";
@@ -25,12 +25,19 @@ declare module "next-auth" {
   }
 }
 
+declare module "@auth/core/adapters" {
+  interface AdapterUser {
+    role: UserRole;
+  }
+}
+
 /**
  * NextAuth Configuration
  * @see https://authjs.dev/getting-started/installation
  */
 export const { handlers, auth, signIn, signOut } = NextAuth({
-  adapter: PrismaAdapter(prisma),
+  // TODO: Re-enable adapter once @auth/core version conflict is resolved
+  // adapter: PrismaAdapter(prisma),
   session: {
     strategy: "jwt",
   },

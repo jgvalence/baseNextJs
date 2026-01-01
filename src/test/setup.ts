@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import { cleanup } from "@testing-library/react";
-import { afterEach } from "vitest";
+import { afterEach, vi } from "vitest";
 
 /**
  * Test Setup
@@ -14,7 +14,7 @@ afterEach(() => {
 });
 
 // Mock environment variables for tests
-process.env.NODE_ENV = "test";
+// NODE_ENV is automatically set to "test" by Vitest
 process.env.NEXTAUTH_SECRET = "test-secret-key-32-characters-long";
 process.env.NEXTAUTH_URL = "http://localhost:3000";
 process.env.DATABASE_URL =

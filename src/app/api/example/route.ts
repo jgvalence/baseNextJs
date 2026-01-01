@@ -131,7 +131,7 @@ export async function PATCH(request: NextRequest) {
 // DELETE /api/example
 export async function DELETE(request: NextRequest) {
   try {
-    const _user = await requireAuth();
+    await requireAuth();
 
     const { searchParams } = request.nextUrl;
     const id = searchParams.get("id");

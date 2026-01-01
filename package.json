@@ -25,10 +25,12 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@auth/prisma-adapter": "^2.11.1",
     "@prisma/client": "^6.1.0",
     "@sentry/nextjs": "^8.44.0",
     "@t3-oss/env-nextjs": "^0.11.1",
     "@tanstack/react-query": "^5.62.0",
+    "@tanstack/react-query-devtools": "^5.91.2",
     "antd": "^5.22.2",
     "bcryptjs": "^2.4.3",
     "class-variance-authority": "^0.7.1",

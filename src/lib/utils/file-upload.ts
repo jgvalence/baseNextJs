@@ -98,8 +98,9 @@ export async function uploadFile(
   const key = `${folder}/${fileName}`;
 
   // Convert file to buffer
-  const arrayBuffer = await file.arrayBuffer();
-  const _buffer = Buffer.from(arrayBuffer);
+  // Uncomment when you have AWS SDK installed
+  // const arrayBuffer = await file.arrayBuffer();
+  // const _buffer = Buffer.from(arrayBuffer);
 
   // Upload to S3/R2
   // Uncomment when you have AWS SDK installed
@@ -136,7 +137,7 @@ export async function deleteFile(_key: string): Promise<void> {
  * This allows client-side uploads without exposing credentials
  */
 export async function generatePresignedUrl(
-  key: string,
+  _key: string,
   _expiresIn = 3600
 ): Promise<string> {
   // Uncomment when you have AWS SDK installed

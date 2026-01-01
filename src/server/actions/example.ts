@@ -98,7 +98,7 @@ export async function updateItemAction(
     //   },
     // });
 
-    const updated = { id: validated.id, ...validated, userId: user.id };
+    const updated = { ...validated, userId: user.id };
 
     revalidatePath("/dashboard");
     revalidatePath(`/items/${validated.id}`);
@@ -112,7 +112,7 @@ export async function updateItemAction(
 // Example: Delete action
 export async function deleteItemAction(id: string) {
   try {
-    const _user = await requireAuth();
+    await requireAuth();
 
     // Check ownership
     // const item = await prisma.someModel.findUnique({
