@@ -128,7 +128,7 @@ export default function HomePage() {
           </h2>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-8">
             {[
-              "Next.js 15",
+              "Next.js 16",
               "React 19",
               "TypeScript",
               "Tailwind CSS",

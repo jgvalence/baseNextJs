@@ -6,7 +6,7 @@ A professional, production-ready Next.js starter template with TypeScript, Tailw
 
 ### Core Stack
 
-- **Next.js 15** - React framework with App Router
+- **Next.js 16** - React framework with App Router and Turbopack
 - **React 19** - Latest React with Server Components
 - **TypeScript** - Strict type checking enabled
 - **Tailwind CSS** - Utility-first CSS framework
@@ -60,7 +60,7 @@ A professional, production-ready Next.js starter template with TypeScript, Tailw
 
 | Category         | Technologies             |
 | ---------------- | ------------------------ |
-| Framework        | Next.js 15, React 19     |
+| Framework        | Next.js 16, React 19     |
 | Language         | TypeScript 5.7+          |
 | Styling          | Tailwind CSS, Ant Design |
 | Database         | PostgreSQL, Prisma       |

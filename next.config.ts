@@ -54,9 +54,9 @@ const nextConfig: NextConfig = {
     ];
   },
 
-  // Experimental features
+  // Experimental features for Next.js 16
   experimental: {
-    // Enable if using server actions
+    // Server Actions body size limit
     serverActions: {
       bodySizeLimit: "2mb",
     },
