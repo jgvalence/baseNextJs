@@ -54,6 +54,9 @@ const nextConfig: NextConfig = {
     ];
   },
 
+  // Cache Components (includes Partial Pre-Rendering)
+  cacheComponents: true,
+
   // Experimental features for Next.js 16
   experimental: {
     // Server Actions body size limit

@@ -25,6 +25,7 @@ Ce document détaille la migration du projet de Next.js 15.1.0 vers Next.js 16.1
 **next.config.ts** :
 - La configuration `serverActions` reste dans `experimental` pour Next.js 16
 - Turbopack est maintenant le bundler par défaut (stable)
+- `cacheComponents: true` activé pour PPR et cache optimisé
 
 ## Nouveautés Next.js 16
 
@@ -34,6 +35,31 @@ Ce document détaille la migration du projet de Next.js 15.1.0 vers Next.js 16.1
 2. **React 19 support** : Support complet de React 19 avec toutes ses fonctionnalités
 3. **Proxy convention** : Migration future de `middleware.ts` → `proxy.ts` (optionnel pour l'instant)
 4. **Performance améliorée** : Compilation et hot reload plus rapides
+
+### Nouvelles APIs et fonctionnalités
+
+1. **Improved Caching APIs**
+   - `updateTag()` : Nouvelle API pour mettre à jour le cache par tag
+   - `revalidateTag()` : API améliorée pour la revalidation du cache
+   - Contrôle granulaire du cache pour optimiser les performances
+
+2. **Partial Pre-Rendering (PPR)**
+   - Nouveau modèle de rendu hybride : statique + dynamique
+   - Navigation instantanée avec `use cache`
+   - Activation via `experimental.ppr: true` dans next.config.ts
+   - Améliore significativement le Time to First Byte (TTFB)
+
+3. **Enhanced Routing**
+   - Navigation optimisée avec déduplication des layouts
+   - Incremental prefetching pour un chargement plus rapide
+   - Meilleure gestion du cache côté client
+   - Transitions de page plus fluides
+
+4. **Next.js Devtools MCP**
+   - Intégration Model Context Protocol (MCP)
+   - Debugging amélioré avec inspection en temps réel
+   - Workflow de développement optimisé
+   - Meilleure visibilité sur les performances
 
 ### Meilleures pratiques adoptées
 
@@ -103,6 +129,22 @@ Le projet utilise les meilleures pratiques Next.js 16 :
 - ✅ React 19 avec tous ses hooks modernes
 - ✅ Validation Zod pour la type safety runtime
 - ✅ NextAuth v5 pour l'authentification
+- ✅ Partial Pre-Rendering (PPR) pour navigation instantanée
+- ✅ Enhanced Routing avec layout deduplication
+- ✅ Improved Caching APIs (updateTag, revalidateTag)
+
+## Utilisation des nouvelles fonctionnalités
+
+Pour apprendre à utiliser les nouvelles APIs et fonctionnalités de Next.js 16, consultez :
+
+📖 **[Guide des fonctionnalités Next.js 16](./NEXTJS_16_FEATURES.md)**
+
+Ce guide couvre :
+- Partial Pre-Rendering (PPR) avec exemples
+- Improved Caching APIs (updateTag, revalidateTag)
+- Enhanced Routing et optimisations
+- use cache directive
+- Meilleures pratiques et migration
 
 ## Prochaines étapes suggérées
 
